@@ -1,6 +1,6 @@
 # ============================================================
 # app.R — Main Application with Login Gate
-# Introduction to R — Powered by PRODATALYTICS INDIA PVT LTD.
+# Introduction to R — Powered by PRODATALYTICS INDIA PVT LTD. 
 # ============================================================
 
 source("global.R")
