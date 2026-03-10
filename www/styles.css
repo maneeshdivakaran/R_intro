@@ -1,0 +1,270 @@
+/* ============================================================
+   Introduction to R — ProDatalytics India Pvt Ltd
+   Custom Stylesheet — Modern Clean Theme
+   ============================================================ */
+
+/* ── Fonts ────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ── Brand Variables ─────────────────────────────────────── */
+:root {
+  --pdl-blue:      #1A3E6E;
+  --pdl-blue-dark: #0f2142;
+  --pdl-orange:    #E8892A;
+  --pdl-orange-lt: #F5A847;
+  --primary:       #1A3E6E;
+  --secondary:     #7C3AED;
+  --success:       #16A34A;
+  --warning:       #D97706;
+  --danger:        #DC2626;
+  --info:          #0891B2;
+  --light-bg:      #F8FAFC;
+  --card-bg:       #FFFFFF;
+  --border:        #E2E8F0;
+  --text-main:     #1E293B;
+  --text-muted:    #64748B;
+  --code-bg:       #1E293B;
+  --code-text:     #E2E8F0;
+  --radius:        12px;
+  --shadow-sm:     0 1px 3px rgba(0,0,0,.08);
+  --shadow-md:     0 4px 16px rgba(0,0,0,.10);
+  --shadow-lg:     0 10px 32px rgba(0,0,0,.12);
+}
+
+/* ── Global ──────────────────────────────────────────────── */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-main);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ── Navbar ──────────────────────────────────────────────── */
+.navbar {
+  background: linear-gradient(135deg, #0f2142 0%, #1A3E6E 100%) !important;
+  box-shadow: 0 2px 16px rgba(0,0,0,.25);
+  padding: 0.4rem 1.2rem;
+  border-bottom: 2px solid var(--pdl-orange);
+}
+.navbar-brand { font-weight: 700; font-size: 1rem; color: #fff !important; }
+.nav-link {
+  color: rgba(255,255,255,.8) !important;
+  font-weight: 500; font-size: .85rem;
+  padding: .55rem .8rem !important;
+  border-radius: 8px; transition: all .2s;
+}
+.nav-link:hover, .nav-link.active {
+  color: #fff !important;
+  background: rgba(255,255,255,.15) !important;
+}
+
+/* ── Page wrapper ────────────────────────────────────────── */
+.tab-content { padding: 1.25rem 1rem; }
+
+/* ── Cards ───────────────────────────────────────────────── */
+.r-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  padding: 1.4rem;
+  margin-bottom: 1.2rem;
+  transition: box-shadow .2s;
+}
+.r-card:hover { box-shadow: var(--shadow-md); }
+.r-card-primary  { border-left: 4px solid var(--pdl-blue); }
+.r-card-success  { border-left: 4px solid var(--success); }
+.r-card-warning  { border-left: 4px solid var(--warning); }
+.r-card-info     { border-left: 4px solid var(--info); }
+.r-card-purple   { border-left: 4px solid var(--secondary); }
+.r-card-orange   { border-left: 4px solid var(--pdl-orange); }
+
+/* ── Hero Banner ─────────────────────────────────────────── */
+.hero-banner {
+  background: linear-gradient(135deg, #0f2142 0%, #1A3E6E 55%, #2563EB 100%);
+  border-radius: var(--radius);
+  padding: 2.2rem 2rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  position: relative; overflow: hidden;
+  border-bottom: 3px solid var(--pdl-orange);
+}
+.hero-banner::before {
+  content: '';
+  position: absolute; top: -20%; right: 5%;
+  width: 300px; height: 300px;
+  background: rgba(232,137,42,.08);
+  border-radius: 50%;
+}
+.hero-banner h1 {
+  font-size: 1.85rem; font-weight: 800;
+  margin-bottom: .5rem; letter-spacing: -.5px;
+}
+.hero-banner h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: .4rem; }
+.hero-banner p  { font-size: 1rem; opacity: .88; margin: 0; }
+
+/* ── ProDatalytics Logo text ─────────────────────────────── */
+.pdl-logo-text { font-weight: 900; letter-spacing: -0.5px; font-size: 1.1rem; }
+.pdl-logo-text .pro    { color: var(--pdl-blue); }
+.pdl-logo-text .data   { color: var(--pdl-orange); }
+.pdl-logo-text .lytics { color: var(--pdl-blue); }
+
+/* ── Module cards ────────────────────────────────────────── */
+.module-card {
+  background: var(--card-bg); border-radius: var(--radius);
+  padding: 1.3rem 1.2rem; text-align: center;
+  border: 1px solid var(--border); box-shadow: var(--shadow-sm);
+  transition: all .25s; height: 100%;
+}
+.module-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--pdl-blue); }
+.module-card .module-icon { font-size: 2.2rem; margin-bottom: .5rem; }
+.module-card h5  { font-weight: 600; color: var(--text-main); margin-bottom: .3rem; font-size: .92rem; }
+.module-card p   { color: var(--text-muted); font-size: .8rem; margin: 0; }
+
+/* ── Code blocks ─────────────────────────────────────────── */
+.code-block {
+  background: var(--code-bg);
+  color: var(--code-text);
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  font-size: .82rem; line-height: 1.75;
+  padding: 1rem 1.2rem;
+  border-radius: 10px; margin: .7rem 0;
+  overflow-x: auto; white-space: pre;
+  box-shadow: inset 0 1px 4px rgba(0,0,0,.25);
+  border-left: 3px solid var(--pdl-orange);
+}
+.code-comment  { color: #6B7280; }
+.code-keyword  { color: #F472B6; }
+.code-string   { color: #A3E635; }
+.code-number   { color: #FCD34D; }
+.code-function { color: #60A5FA; }
+.code-output   { color: #A7F3D0; }
+
+/* ── Section typography ──────────────────────────────────── */
+.section-title   { font-size: 1.3rem; font-weight: 800; color: var(--text-main); margin-bottom: .2rem; letter-spacing: -.3px; }
+.section-subtitle{ color: var(--text-muted); font-size: .88rem; margin-bottom: 1.1rem; }
+.lesson-heading  {
+  font-size: .95rem; font-weight: 700; color: var(--pdl-blue);
+  margin: 1.2rem 0 .5rem; padding-bottom: .3rem;
+  border-bottom: 2px solid #DBEAFE; display: flex; align-items: center; gap: .4rem;
+}
+
+/* ── Try-It panels ───────────────────────────────────────── */
+.tryit-panel {
+  background: linear-gradient(135deg, #EFF6FF, #FFF7ED);
+  border: 1px dashed #93C5FD;
+  border-radius: var(--radius); padding: 1.2rem; margin-top: 1rem;
+}
+.tryit-panel h6 {
+  font-weight: 800; color: var(--pdl-blue); margin-bottom: .8rem;
+  font-size: .85rem; text-transform: uppercase; letter-spacing: .6px;
+}
+
+/* ── Output boxes ────────────────────────────────────────── */
+.output-box {
+  background: var(--code-bg); color: #A7F3D0;
+  font-family: 'JetBrains Mono', monospace; font-size: .8rem;
+  padding: .85rem 1rem; border-radius: 8px;
+  min-height: 52px; white-space: pre-wrap; word-break: break-word;
+}
+.shiny-text-output.output-box { display: block; }
+
+/* ── Buttons ─────────────────────────────────────────────── */
+.btn-run {
+  background: var(--pdl-blue); color: #fff; border: none;
+  border-radius: 8px; padding: .45rem 1.1rem;
+  font-size: .87rem; font-weight: 600; cursor: pointer;
+  transition: background .2s, transform .15s; margin-top: .5rem;
+}
+.btn-run:hover { background: #0f2142; transform: translateY(-1px); color: #fff; }
+
+.btn-check {
+  background: var(--success); color: #fff; border: none;
+  border-radius: 8px; padding: .5rem 1.3rem;
+  font-size: .9rem; font-weight: 600; transition: background .2s;
+}
+.btn-check:hover { background: #15803d; color: #fff; }
+
+/* ── Quiz styles ─────────────────────────────────────────── */
+.quiz-question {
+  background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.1rem 1.3rem;
+  margin-bottom: .9rem; box-shadow: var(--shadow-sm);
+}
+.quiz-question:hover { box-shadow: var(--shadow-md); }
+.quiz-question p.q-text  { font-weight: 600; margin-bottom: .7rem; font-size: .93rem; }
+.quiz-result-correct     { color: var(--success); font-weight: 700; font-size: .88rem; }
+.quiz-result-incorrect   { color: var(--danger);  font-weight: 700; font-size: .88rem; }
+
+.score-banner {
+  background: linear-gradient(135deg, #ECFDF5, #D1FAE5);
+  border: 1px solid #6EE7B7; border-radius: var(--radius);
+  padding: 1.2rem 1.5rem; text-align: center; margin-top: 1rem;
+}
+.score-banner .score-num   { font-size: 2.4rem; font-weight: 900; color: var(--success); }
+.score-banner .score-label { font-size: .9rem; color: #065F46; }
+
+/* ── Badges ──────────────────────────────────────────────── */
+.badge-module {
+  display: inline-block; padding: .2rem .6rem;
+  border-radius: 99px; font-size: .72rem; font-weight: 700;
+  background: #DBEAFE; color: var(--pdl-blue);
+  margin-bottom: .4rem;
+}
+
+/* ── Info callouts ───────────────────────────────────────── */
+.callout {
+  display: flex; gap: .7rem; padding: .85rem 1rem;
+  border-radius: 10px; margin: .7rem 0; font-size: .87rem;
+}
+.callout-info    { background: #EFF6FF; border-left: 3px solid var(--pdl-blue); }
+.callout-tip     { background: #F0FDF4; border-left: 3px solid var(--success); }
+.callout-warning { background: #FFFBEB; border-left: 3px solid var(--warning); }
+.callout .callout-icon { font-size: 1.05rem; flex-shrink: 0; margin-top: .05rem; }
+.callout p { margin: 0; color: var(--text-main); }
+
+/* ── Tab styling ─────────────────────────────────────────── */
+.nav-tabs .nav-link {
+  color: var(--text-muted) !important; background: transparent !important;
+  border: none !important; font-weight: 500; font-size: .86rem;
+  padding: .5rem .85rem !important;
+  border-radius: 8px 8px 0 0 !important; transition: all .2s;
+}
+.nav-tabs .nav-link:hover { color: var(--pdl-blue) !important; background: #F1F5F9 !important; }
+.nav-tabs .nav-link.active {
+  color: var(--pdl-blue) !important; background: #EFF6FF !important;
+  font-weight: 700; border-bottom: 2px solid var(--pdl-orange) !important;
+}
+.nav-tabs { border-bottom: 2px solid var(--border); margin-bottom: 1.1rem; }
+
+/* ── DataTables ──────────────────────────────────────────── */
+.dataTables_wrapper { font-size: .84rem; }
+table.dataTable thead th {
+  background: var(--light-bg); font-weight: 700; color: var(--text-main);
+  border-bottom: 2px solid var(--pdl-blue) !important;
+}
+
+/* ── Progress ring ───────────────────────────────────────── */
+.progress-ring { position: relative; display: inline-block; }
+
+/* ── Login page ──────────────────────────────────────────── */
+.form-control { border-radius: 8px !important; font-size: .88rem !important; }
+.form-control:focus { border-color: var(--pdl-blue) !important; box-shadow: 0 0 0 3px rgba(26,62,110,.12) !important; }
+
+/* ── Certificate preview ─────────────────────────────────── */
+.cert-preview { font-family: 'Inter', sans-serif; }
+
+/* ── PDL footer stripe ───────────────────────────────────── */
+.pdl-footer {
+  background: linear-gradient(90deg, var(--pdl-blue-dark), var(--pdl-blue), var(--pdl-orange), var(--pdl-blue), var(--pdl-blue-dark));
+  height: 6px; border-radius: 3px; margin: 1rem 0;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero-banner h1 { font-size: 1.3rem; }
+  .tab-content    { padding: .8rem .4rem; }
+  .r-card         { padding: 1rem; }
+  .code-block     { font-size: .75rem; }
+}
